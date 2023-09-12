@@ -20,15 +20,18 @@ let message;
           const utentiregistrati = registrati[e];
           if(utentiregistrati === email){
             emailcorretta = true;
-                message ='Sei nella lista! Puoi accedere.';
+                message ='Sei in lista! Puoi accedere.';    
+                content.classList.add('text-success');
           }
         }
         if(! emailcorretta){
-            message ='Negativo! Non sei nella lista.';
+            message ='Negativo! Non sei in lista.';
+            content.classList.add('text-danger');
       }
       }
 
     content.innerHTML=message;
+
     
 })
 
