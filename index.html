@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
     <title>Email e Dadi</title>
 </head>
 <body>
    <div class="container container_email">
-    <p></p>
+    <div class="row row-cols-3 my-5 ">
+        <div class="col">
+           <div class="email">
+            <input type="email" class="form-control" id="email" placeholder="Indirizzo@email">
+           </div> 
+        </div>           
+        <div class="col">
+            <button type="button" class="btn btn-primary" id="btn">Invia</button>
+        </div>
+        <div class="col">
+            <h1 id="risposta_1"></h1>
+        </div>
+    </div>
    </div>
    <div class="container container_dadi">
    </div>

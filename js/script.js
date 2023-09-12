@@ -3,23 +3,35 @@
 
 const registrati = ['a', 'e', 'i', 'o', 'u'];
 const emailDaAggiungere = 1;
+const EmailInput = document.getElementById('email');
+const btnEmail = document.getElementById('btn');
+const content = document.getElementById('risposta_1');
+let message;
 
-for (let i = 0; i < emailDaAggiungere; i++){
-  const email = prompt('Digitare email');
-  let emailcorretta = false;
 
-  for (let e = 0; e < registrati.length; e++){
-    const utentiregistrati = registrati[e];
-    if(utentiregistrati === email){
-      emailcorretta = true;
-          console.log('accesso');
 
-    }
-  }
-  if(! emailcorretta){
-    console.log('negativo');
-}
-}
+
+  btnEmail.addEventListener('click', function(){    
+    for (let i = 0; i < emailDaAggiungere; i++){
+        const email = EmailInput.value;
+        let emailcorretta = false;
+      
+        for (let e = 0; e < registrati.length; e++){
+          const utentiregistrati = registrati[e];
+          if(utentiregistrati === email){
+            emailcorretta = true;
+                message ='Sei nella lista! Puoi accedere.';
+          }
+        }
+        if(! emailcorretta){
+            message ='Negativo! Non sei nella lista.';
+      }
+      }
+
+    content.innerHTML=message;
+    
+})
+
 
 // Dadi
 
