@@ -38,17 +38,24 @@ let message;
 
 // Dadi
 
-const giocatore = Math.ceil(Math.random() * 6);
-const computer = Math.ceil(Math.random()* 6);
-console.log(giocatore);
-console.log(computer);
+const btnDadi = document.getElementById('btn-d');
+const content2 = document.querySelector('.risposta_2');
 
-if(giocatore > computer){
-    console.log('Ha vinto giocatore');
-}else if(giocatore < computer){
-    console.log('Ha vinto computer');
-}else{
-    console.log('pari');
+const giocatore = Math.ceil(Math.random() * 6);
+const computer = Math.ceil(Math.random()* 6); 
+
+btnDadi.addEventListener('click', function(){
+
+    if(giocatore > computer){
+    message ='ha vinto il giocatore.';
+    }else if(giocatore < computer){
+    message='ha vinto il computer.';
+    }else{
+    message='siete pari.';
 }
+content2.innerHTML='Al giocatore è uscito ' + giocatore + ' , al computer è uscito ' + computer + '. Quindi ' + message;
+})
+
+
 
 
