@@ -20,3 +20,20 @@ for (let i = 0; i < emailDaAggiungere; i++){
     console.log('negativo');
 }
 }
+
+// Dadi
+
+const giocatore = Math.ceil(Math.random() * 6);
+const computer = Math.ceil(Math.random()* 6);
+console.log(giocatore);
+console.log(computer);
+
+if(giocatore > computer){
+    console.log('Ha vinto giocatore');
+}else if(giocatore < computer){
+    console.log('Ha vinto computer');
+}else{
+    console.log('pari');
+}
+
+
